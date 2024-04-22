@@ -9,6 +9,14 @@ import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  public heroNames: string[] = ['Spiderman', 'Hulk', 'Ironman', 'Thor'];
+  public deletedHero?: string;
+
   ngOnInit(): void { }
+
+
+  removeLastHero(): void {
+    this.deletedHero = this.heroNames.pop();
+  }
 
 }
